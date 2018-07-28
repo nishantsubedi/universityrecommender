@@ -1,0 +1,309 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- <link rel="icon" href="../../../../favicon.ico"> -->
+
+    <title>Checkout example for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/public/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <!-- <link href="form-validation.css" rel="stylesheet"> -->
+    <style rel="stylesheet">
+      label{
+        font-weight: bold;
+      }
+    </style>
+  </head>
+
+  <body class="bg-light">
+
+    <div class="container">
+      <div class="py-5 text-center">
+        <h2>Insertion form</h2>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <form method="post" action="/insertuniversity">
+
+            <div class="form-group">
+              <label>University Name:</label>
+              <input type="text" name="inst_name" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label>University Province:</label>               
+                <select name="inst_state">
+                    <option value="New South Wales">New South Wales</option>
+                    <option value="Queensland">Queensland</option>
+                    <option value="South Australia">South Australia</option>
+                    <option value="Victoria">Victoria</option>
+                    <option value="Western Australia">Western Australia</option>
+                    <option value="Tasmania">Tasmania</option>
+                    <option value="Australian Capital Territory">Australian Capital Territory</option>
+                    <option value="Northern Territory">Northern Territory</option>
+
+
+                </select>
+
+              </div>
+
+            <div class="form-group">
+              <label>University Address:</label>
+              <input type="text" name="inst_address" class="form-control">
+            </div>
+
+            <div class="form-group">
+              <label>University Phone:</label>
+              <input type="text" name="inst_phone" class="form-control">
+            </div>
+
+            <div class="form-group">
+              <label>University Fee:</label>
+              <input type="text" name="inst_fee" class="form-control">
+            </div>
+
+            <div class="form-group">
+              <label>University RankWorld:</label>
+              <input type="text" name="inst_rankworld" class="form-control">
+            </div>
+
+            <div class="form-group">
+              <label>University RankAUstralia:</label>
+              <input type="text" name="inst_rankaustralia" class="form-control">
+            </div>
+
+            <div class="form-group">
+              <label>University Monthly City Expense:</label>
+              <input type="text" name="inst_monthlycityexpense" class="form-control">
+            </div>
+
+            <div class="form-group">
+              <label>University Total Students:</label>
+              <input type="text" name="inst_totalstudents" class="form-control">
+            </div>
+
+            <div class="form-group">
+              <label>University Type:</label>
+              <select name="inst_type">
+                <option value="public">public</option>
+                <option value="private">private</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>University Online course availability:</label>
+              <select name="inst_onlinecourseavailability">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>University Min IELTS:</label>
+              <select name="inst_minielts">
+                  <option value="5.5">5.5</option>
+                  <option value="6">6</option>
+                  <option value="6.5">6.5</option>
+                  <option value="7">7</option>
+                  <option value="7.5">7.5</option>
+                  <option value="7.5">8</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>University Affiliation(for colleges only):</label>
+              <input type="text" name="inst_affiliatedto" class="form-control">
+            </div>
+
+            <div class="form-group">
+              <label>University Number of Intakes</label>
+              <input type="text" name="inst_numberofintakes" class="form-control">
+            </div>
+
+            <div class="form-group">
+              <label>University Url</label>
+              <input type="text" name="inst_url" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label>University Image</label>
+                <input type="text" name="inst_image" class="form-control">
+            </div>
+
+            <div class="form-group">
+              <label>University OR College</label>
+              <select name="inst_collegeuni">
+                <option value="university">University</option>
+                <option value="college">College</option>
+              </select>
+            </div>
+
+
+            <div class="form-group">
+              <label>University Scholarship</label>
+              <select name="inst_scholarship">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>University Level</label>
+              <div class="checkbox">
+                <label><input type="checkbox" name="inst_level[0]" value="undergraduate">Undergraduate</label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" name="inst_level[1]" value="graduate">Graduate</label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>University Calender System</label>
+              <div class="checkbox">
+                <label><input type="checkbox" name="inst_calendar[0]" value="semester">Semester</label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" name="inst_calendar[1]" value="trimester">Trimester</label>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label>University Courses comma separated</label>
+              
+              <div class="checkbox">
+                  <label><input type="checkbox" name="inst_course[0]" value="Visual Arts">Visual Arts</label>
+              </div>
+              <div class="checkbox">
+                  <label><input type="checkbox" name="inst_course[1]" value="Photography">Photography</label>
+              </div>
+              <div class="checkbox">
+                  <label><input type="checkbox" name="inst_course[2]" value="Business Administration">Business Administration</label>
+              </div>
+              <div class="checkbox">
+                  <label><input type="checkbox" name="inst_course[3]" value="Arts and Humanities">Arts and Humanities</label>
+              </div>
+              <div class="checkbox">
+                  <label><input type="checkbox" name="inst_course[4]" value="Education">Education</label>
+              </div>
+              <div class="checkbox">
+                  <label><input type="checkbox" name="inst_course[5]" value="Law">Law</label>
+              </div>
+              <div class="checkbox">
+                  <label><input type="checkbox" name="inst_course[6]" value="Hotel Management">Hotel Management</label>
+              </div>
+              <div class="checkbox">
+                  <label><input type="checkbox" name="inst_course[7]" value="Accountancy">Accountancy</label>
+              </div>
+              <div class="checkbox">
+                  <label><input type="checkbox" name="inst_course[8]" value="Mathematics">Mathematics</label>
+              </div>
+              <div class="checkbox">
+                  <label><input type="checkbox" name="inst_course[9]" value="Culture">Culture</label>
+              </div>
+              <div class="checkbox">
+                  <label><input type="checkbox" name="inst_course[10]" value="Tourism">Tourism</label>
+              </div>
+              <div class="checkbox">
+                  <label><input type="checkbox" name="inst_course[11]" value="Design">Design</label>
+              </div>
+              <div class="checkbox">
+                  <label><input type="checkbox" name="inst_course[12]" value="Health Science">Health Science</label>
+              </div>
+              <div class="checkbox">
+                  <label><input type="checkbox" name="inst_course[13]" value="Nursing">Nursing</label>
+              </div>
+              <div class="checkbox">
+                  <label><input type="checkbox" name="inst_course[14]" value="Medicine">Medicine</label>
+              </div>
+              <div class="checkbox">
+                  <label><input type="checkbox" name="inst_course[15]" value="Physiotherapy">Physiotherapy</label>
+              </div>
+              <div class="checkbox">
+                  <label><input type="checkbox" name="inst_course[16]" value="Psychology">Psychology</label>
+              </div>
+              <div class="checkbox">
+                  <label><input type="checkbox" name="inst_course[17]" value="Public Health">Public Health</label>
+              </div>
+              <div class="checkbox">
+                  <label><input type="checkbox" name="inst_course[18]" value="Hospitality">Hospitality</label>
+              </div>
+              <div class="checkbox">
+                  <label><input type="checkbox" name="inst_course[20]" value="Montessori">Montessori</label>
+              </div>
+              <div class="checkbox">
+                  <label><input type="checkbox" name="inst_course[21]" value="Dental">Dental</label>
+              </div>
+              <div class="checkbox">
+                  <label><input type="checkbox" name="inst_course[22]" value="Religious Education">Religious Education</label>
+              </div>
+              <div class="checkbox">
+                  <label><input type="checkbox" name="inst_course[23]" value="Theology">Theology</label>
+              </div>
+              <div class="checkbox">
+                  <label><input type="checkbox" name="inst_course[24]" value="Leadership">Leadership</label>
+              </div>
+              <div class="checkbox">
+                  <label><input type="checkbox" name="inst_course[25]" value="Management">Management</label>
+              </div>
+              <div class="checkbox">
+                  <label><input type="checkbox" name="inst_course[26]" value="Information Technology">Information Technology</label>
+              </div>
+              <div class="checkbox">
+                  <label><input type="checkbox" name="inst_course[27]" value="Computer Science">Computer Science</label>
+              </div>
+              <div class="checkbox">
+                  <label><input type="checkbox" name="inst_course[28]" value="Civil Engineering">Civil Engineering</label>
+              </div>
+              <div class="checkbox">
+                  <label><input type="checkbox" name="inst_course[29]" value="Electrical and Electronic Engineering">Electrical and Electronic Engineering</label>
+              </div>
+              <div class="checkbox">
+                  <label><input type="checkbox" name="inst_course[30]" value="Mechanical Engineering">Mechanical Engineering</label>
+              </div>
+              <div class="checkbox">
+                  <label><input type="checkbox" name="inst_course[31]" value="Social Science">Social Science</label>
+              </div>
+              <div class="checkbox">
+                  <label><input type="checkbox" name="inst_course[32]" value="Film Study">Film Study</label>
+              </div>
+              <div class="checkbox">
+                  <label><input type="checkbox" name="inst_course[33]" value="Multimedia">Multimedia</label>
+              </div>
+              <div class="checkbox">
+                  <label><input type="checkbox" name="inst_course[34]" value="Music">Music</label>
+              </div>
+              <div class="checkbox">
+                  <label><input type="checkbox" name="inst_course[35]" value="Sports">Sports</label>
+              </div>
+              <div class="checkbox">
+                  <label><input type="checkbox" name="inst_course[36]" value="Physical Education">Physical Education</label>
+              </div>
+              <div class="checkbox">
+                  <label><input type="checkbox" name="inst_course[37]" value="Physics">Physics</label>
+              </div>
+              <div class="checkbox">
+                  <label><input type="checkbox" name="inst_course[38]" value="Finance">Finance</label>
+              </div>
+              <div class="checkbox">
+                  <label><input type="checkbox" name="inst_course[39]" value="Agriculture">Agriculture</label>
+              </div>
+              <div class="checkbox">
+                  <label><input type="checkbox" name="inst_course[40]" value="Civil Security">Civil Security</label>
+              </div>
+            </div>
+           <button class="btn btn-info" type="submit">Submit</button> 
+          </form>
+        </div>
+       
+      </div>
+    </div>
+  </body>
+</html>

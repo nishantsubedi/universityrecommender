@@ -1,0 +1,475 @@
+
+
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>University Recommendation</title>
+  <base target="_self">
+  <meta name="description" content="A collapsing sidebar menu. Bootstrap 4 compatible with FontAwesome icons. When collapsed it shows only the icons. It includes logo, sub-menus, dividers with and without titles. It&#39;s 100% Bootstrap 4." />
+  <meta name="google" value="notranslate">
+
+
+  <link rel="stylesheet" href="/public/css/bootstrap.min.css" />
+  <!-- <link href="/public/fontawesome/css/all.css" rel="stylesheet" /> -->
+  <link href="/public/css/style.css" rel="stylesheet"/>
+  <link href="/public/css/card1.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+<!--    -->
+
+</head>
+<body >
+  
+  
+  <!-- Bootstrap NavBar -->
+<nav class="navbar navbar-expand-md navbar-dark yo">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand " href="#">
+    <!-- <img src="https://v4-alpha.getbootstrap.com/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt=""> -->
+    <span class="menu-collapsed ">University Recommendation</span>
+  </a>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <!-- <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Top universities</a>
+      </li> -->
+      
+      <!-- This menu is hidden in bigger devices with d-sm-none. 
+           The sidebar isn't proper for smaller screens imo, so this dropdown menu can keep all the useful sidebar itens exclusively for smaller screens  -->
+      <li class="nav-item dropdown d-sm-block d-md-none" >
+        <a class="nav-link dropdown-toggle" href="#" id="smallerscreenmenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-labelledby="smallerscreenmenu">
+           
+        </a>
+         <div class="dropdown-menu" aria-labelledby="smallerscreenmenu"> 
+            <a class="dropdown-item" href="#">Home</a>
+            <a class="dropdown-item" href="#">About</a>
+            <a class="dropdown-item" href="#">Top Universities</a>
+            <a class="dropdown-item" href="#">FAQ</a>
+        </div> 
+      </li><!-- Smaller devices menu END -->
+      
+    </ul>
+  </div>
+</nav><!-- NavBar END -->
+
+
+<!-- Bootstrap row -->
+<div class="row" id="body-row">
+    <!-- Sidebar -->
+    <div id="sidebar-container" class="sidebar-expanded d-none d-md-block"><!-- d-* hiddens the Sidebar in smaller devices. Its itens can be kept on the Navbar 'Menu' -->
+        <!-- Bootstrap List Group -->
+        <ul class="list-group">
+            <!-- Separator with title -->
+           
+            <!-- /END Separator -->
+            <!-- Menu with submenu -->
+            <a href="#submenu1" data-toggle="collapse" aria-expanded="false" class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
+                <div class="d-flex w-100 justify-content-start align-items-center">
+                    <span class="fa fa-dashboard fa-fw mr-3"></span> 
+                    <span class="menu-collapsed">Home</span>
+                    <!-- <span class="submenu-icon ml-auto"></span> -->
+                </div>
+            </a>
+
+             <!-- Separator without title -->
+             <!-- <li class="list-group-item sidebar-separator menu-collapsed"></li>             -->
+             <!-- /END Separator -->
+
+
+
+
+
+            <!-- Submenu content -->
+          
+            <a href="#submenu2" data-toggle="collapse" aria-expanded="false" class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
+                <div class="d-flex w-100 justify-content-start align-items-center">
+                    <span class="fa fa-user fa-fw mr-3"></span>
+                    <span class="menu-collapsed">About</span>
+                    <!-- <span class="submenu-icon ml-auto"></span> -->
+                </div>
+            </a>
+
+
+           
+           
+
+
+            <a href="#" class="bg-dark list-group-item list-group-item-action">
+                <div class="d-flex w-100 justify-content-start align-items-center">
+                    <span class="fa fa-tasks fa-fw mr-3"></span>
+                    <span class="menu-collapsed">Top Universities List</span>    
+                </div>
+            </a>
+
+  
+             <li class="list-group-item sidebar-separator menu-collapsed"></li>            
+             <!-- /END Separator -->
+
+
+            <a href="#" class="bg-dark list-group-item list-group-item-action">
+                <div class="d-flex w-100 justify-content-start align-items-center">
+                    <span class="fa fa-tasks fa-fw mr-3"></span>
+                    <span class="menu-collapsed">FAQ</span>    
+                </div>
+            </a>
+
+
+
+            <!-- Separator with title -->
+          
+           
+            <a href="#" class="bg-dark list-group-item list-group-item-action">
+                <div class="d-flex w-100 justify-content-start align-items-center">
+                    <span class="fa fa-question fa-fw mr-3"></span>
+                    <span class="menu-collapsed">Help</span>
+                </div>
+            </a>
+            <a href="#" data-toggle="sidebar-colapse" class="bg-dark list-group-item list-group-item-action d-flex align-items-center">
+                <div class="d-flex w-100 justify-content-start align-items-center">
+                    <span id="collapse-icon" class="fa fa-2x mr-3"></span>
+                    <!-- <span id="collapse-text" class="menu-collapsed">Collapse</span> -->
+                </div>
+            </a>
+             
+        </ul><!-- List Group END-->
+    </div><!-- sidebar-container END -->
+
+    <!-- MAIN -->
+    <div class="col">
+        <div class="row">
+            <h1>Please submit yourquery</h1>
+        </div>
+        <br><br>
+    <div class="container-fluid"> 
+        <form name="" class="" id="" method="post" action="/recommend">
+        <div class="row">
+
+            <!-- Card1 Starting   -->
+            <div class="col-lg-4 col-md-6 col-sm-12 ">
+
+                <!-- <div class="card text-black mb-3  main"> -->
+                <div class="card card-shadow">
+
+                    <div id="iconbox" class="color1">
+                    <i class="fas fa-book icon"></i>
+                    </div>
+                    <div class="card-header head">Course</div>
+
+                    <hr class="hr-prop">
+                    <div class="card-body">
+                        <div class="stats stats-height">
+                            <div class="row">
+                                <div class="col-lg-12 col-md-">
+
+                                    <select class="custom-select" required="" name="course">
+                                        <option value="" selected="">Select Course Required</option>
+                                        <option value="Accountancy">Accountancy</option>
+                                        <option value="Agriculture">Agriculture</option>
+                                        <option value="Arts and Humanities">Arts and Humanities</option>
+                                        <option value="Business Administration">Business Administration</option>
+                                        <option value="Civil Engineering">Civil Engineering</option>
+                                        <option value="Civil Security">Civil Security</option>
+                                        <option value="Computer Science">Computer Science</option>
+                                        <option value="Culture">Culture</option>
+                                        <option value="Dental">Dental</option>
+                                        <option value="Design">Design</option>
+                                        <option value="Electrical and Electronic Engineering">Electrical and Electronic Engineering</option>
+                                        <option value="Film Study">Film Study</option>
+                                        <option value="Finance">Finace</option>
+                                        <option value="Health Science">Health Science</option>
+                                        <option value="Hospitality">Hospitality</option>
+                                        <option value="Hotel Management">Hotel Management</option>
+                                        <option value="Information Technology">Information Technology</option>
+                                        <option value="Law">Law</option>
+                                        <option value="Leadership">Leadership</option>
+                                        <option value="Management">Management</option>
+                                        <option value="Mathematics">Mathematics</option>
+                                        <option value="Mechanical Engineering">Mechanical Engineering</option>
+                                        <option value="Medicine">Medicine</option>
+                                        <option value="Montessori">Montessori</option>
+                                        <option value="Multimedia">Multimedia</option>
+                                        <option value="Music">Music</option>
+                                        <option value="Nursing">Nursing</option>
+                                        <option value="Photography" >Photography</option>
+                                        <option value="Physical Education" >Physical Education</option>
+                                        <option value="Physics">Physics</option>
+                                        <option value="Physiotherapy" >Physiotherapy</option>
+                                        <option value="Psychology" >Psychology</option>
+                                        <option value="Public Health" >Public Health</option>
+                                        <option value="Religious Education" >Religious Education</option>
+                                        <option value="Social Science" >Social Science</option>
+                                        <option value="Sports" >Sports</option>
+                                        <option value="Theology" >Theology</option>
+                                        <option value="Tourism" >Tourism</option>
+                                        <option value="Visual Arts" >Visual Arts</option>
+                                   
+
+                                      </select>
+                                      <!-- <button type="submit" >Submit</button> -->
+                                    <!-- </form> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>        
+                </div>
+                <div class="break"></div>
+
+            </div>
+            <!-- Card1 Finished -->
+
+            <!-- Card2 Starting   -->
+            <div class="col-lg-4 col-md-6 col-sm-12">
+
+                <div class="card card-shadow">
+
+                    <div id="iconbox" class="color2">
+                    <i class="fas fa-book icon"></i>
+                    </div>
+                    <div class="card-header head">IELTS Required</div>
+
+                    <hr class="hr-prop">
+                    <div class="card-body">
+                        <div class="stats stats-height">
+                            <div class="row">
+                                <div class="col-lg-12 col-md-">
+                                    <select class="custom-select" required="" name="ielts">
+                                        <option value="" selected="">Select IELTS Required</option>
+                                        <option value="5.5">5.5</option>
+                                        <option value="6">6</option>
+                                        <option value="6.5">6.5</option>
+                                        <option value="7">7</option>
+                                        <option value="7.5">7.5</option>
+                                        <option value="7.5">8</option>
+
+                                      </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>        
+                </div>
+                <div class="break"></div>
+
+            </div>
+            <!-- Card2 Finished -->
+
+            <!-- Card3 Starting   -->
+            <div class="col-lg-4 col-md-6 col-sm-12">
+
+                <div class="card card-shadow">
+
+                    <div id="iconbox" class="color3">
+                    <i class="fas fa-book icon"></i>
+                    </div>
+                    <div class="card-header head">Education Level</div>
+
+                    <hr class="hr-prop">
+                    <div class="card-body">
+                        <div class="stats stats-height">
+                            <div class="row">
+                                <div class="col-lg-12 col-md-">
+                                    <select class="custom-select" required="" name="level">
+                                        <option value="" selected="">Select Education Level</option>
+                                        <option value="undergraduate">Undergraduate</option>
+                                        <option value="graduate">Graduate</option>
+                                       
+                                      </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>        
+                </div>
+                <div class="break"></div>
+
+            </div>
+            <!-- Card3 Finished -->
+            
+            <!-- Card4 Starting   -->
+            <div class="col-lg-4 col-md-6 col-sm-12">
+
+                <div class="card card-shadow">
+
+                    <div id="iconbox" class="color4">
+                    <i class="fas fa-book icon"></i>
+                    </div>
+                    <div class="card-header head">Online Courses </div>
+
+                    <hr class="hr-prop">
+                    <div class="card-body">
+                        <div class="stats stats-height">
+                            <div class="row">
+                                <div class="col-lg-12 col-md-">
+                                    <select class="custom-select" required="" name="onlinecourse">
+                                        <option value="" selected="">Select Online Courses Availability</option>
+                                        <option value="1">Yes</option>
+                                        <option value="2">No</option>
+                                       
+                                      </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>        
+                </div>
+                <div class="break"></div>
+
+            </div>
+            <!-- Card4 Finished -->
+
+            <!-- Card5 Starting   -->
+            <div class="col-lg-4 col-md-6 col-sm-12">
+
+                <div class="card card-shadow">
+
+                    <div id="iconbox" class="color5">
+                    <i class="fas fa-book icon"></i>
+                    </div>
+                    <div class="card-header head">Scholarship</div>
+
+                    <hr class="hr-prop">
+                    <div class="card-body">
+                        <div class="stats stats-height">
+                            <div class="row">
+                                <div class="col-lg-12 col-md-">
+                                    <select class="custom-select" required="" name="scholarship" >
+                                        <option value="" selected="">Select Scholarship Availability</option>
+                                        <option value="1">Yes</option>
+                                        <option value="2">No</option>
+                                       
+                                      </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>        
+                </div>
+                <div class="break"></div>
+
+            </div>
+            <!-- Card5 Finished -->
+
+            <!-- Card6 Starting   -->
+            <div class="col-lg-4 col-md-6 col-sm-12 ">
+
+                <div class="card card-shadow">
+
+                    <div id="iconbox" class="color6">
+                    <i class="fas fa-book icon"></i>
+                    </div>
+                    <div class="card-header head">Institution Type</div>
+
+                    <hr class="hr-prop">
+                    <div class="card-body">
+                        <div class="stats stats-height">
+                            <div class="row">
+                                <div class="col-lg-12 col-md-">
+                                    <select class="custom-select" required="" name="institutiontype">
+                                        <option value="" selected="">Select Institution Type</option>
+                                        <option value="private">Private</option>
+                                        <option value="public">Public</option>
+                                        
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>        
+                </div>
+                <div class="break"></div>
+            
+             </div>
+            <!-- Card6 Finished -->
+
+
+
+
+
+
+
+             <div class=" offset-2 col-md-4"></div>
+        <input type="submit" value="submit" class="btn btn-lg btn-danger"> 
+
+           
+
+             
+              
+        </div>
+        </form>
+        </div><!-- Main Col END -->
+        
+    </div>
+        
+           
+</div>
+
+</div>
+
+
+<!-- </div> -->
+  
+  <script>
+
+    // sandbox disable popups
+    if (window.self !== window.top && window.name!="view1") {;
+      window.alert = function(){/*disable alert*/};
+      window.confirm = function(){/*disable confirm*/};
+      window.prompt = function(){/*disable prompt*/};
+      window.open = function(){/*disable open*/};
+    }
+    
+    // prevent href=# click jump
+    document.addEventListener("DOMContentLoaded", function() {
+      var links = document.getElementsByTagName("A");
+      for(var i=0; i < links.length; i++) {
+        if(links[i].href.indexOf('#')!=-1) {
+          links[i].addEventListener("click", function(e) {
+          console.debug("prevent href=# click");
+              if (this.hash) {
+                if (this.hash=="#") {
+                  e.preventDefault();
+                  return false;
+                }
+                else {
+                  /*
+                  var el = document.getElementById(this.hash.replace(/#/, ""));
+                  if (el) {
+                    el.scrollIntoView(true);
+                  }
+                  */
+                }
+              }
+              return false;
+          })
+        }
+      }
+    }, false);
+  </script> 
+
+  
+  <!--scripts loaded here-->
+  
+  <script src="/public/js/jquery.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script> -->
+ <script src="/public/js/popper.min.js"></script>
+  <script src="/public/js/bootstrap.min.js"></script>
+  <script src="/public/js/script.js"></script>
+  
+  <script>
+    // to collapse sidebar at start
+    SidebarCollapse();
+    function displayButtons(){
+        alert('kk');
+        document.getElementById('mybutton').style.display="inline";
+        document.getElementById('mybutton2').style.display="inline";
+        // $('mybuttons').
+    }
+  </script>
+  
+
+</body>
+</html>
