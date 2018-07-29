@@ -88,28 +88,11 @@ app.post('/insertuniversity', (req, res) => {
 
 
 app.get('/', (req, res) => {
-    Institution.find(function(err, institution){
-        if(!err){
-            var courses = [];
-            institution.forEach(inst => {
-                if(inst.course.length > 1){
-
-                }
-
-                courses = courses.concat(inst.course);
-
-            });
-            console.log(courses);              
+                 
             // res.send(courses);
             // console.log(courses);
             res.render('index');
-        } else {
-            res.statusCode = 500;
-            console.log('Internal error(%d): %s',res.statusCode,err.message);
-            return res.send({ error: 'Server error' });
-        }
-    });
-   
+      
 });
 
 app.post('/recommend', (req, res)=>{
