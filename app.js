@@ -6,15 +6,15 @@ var Institution = require('./models/institution.js');
 var bodyParser = require('body-parser')
 const app = express();
 
-// mongoose.connect('mongodb://localhost:27017/university', function(err){
-//     if (err) throw err
-//   else console.log("connected to mongodb"); 
-// });
-
-mongoose.connect('mongodb://nishant:abcd1234@ds257551.mlab.com:57551/university', function(err){
+mongoose.connect('mongodb://localhost:27017/university', function(err){
     if (err) throw err
   else console.log("connected to mongodb"); 
 });
+
+// mongoose.connect('mongodb://nishant:abcd1234@ds257551.mlab.com:57551/university', function(err){
+//     if (err) throw err
+//   else console.log("connected to mongodb"); 
+// });
 
 
 app.set('views', path.join(__dirname, 'views'));
